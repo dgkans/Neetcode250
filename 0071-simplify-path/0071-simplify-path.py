@@ -5,7 +5,7 @@ class Solution:
         for t in tokens:
             if t == '.' or t == "":
                 continue
-            elif t == '..':
+            if t == '..':
                 if stack:
                     stack.pop()
             else:
