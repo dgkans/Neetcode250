@@ -10,7 +10,7 @@ class Solution:
                 bottom = mid - 1
             else:
                 top = mid + 1
-        target_row = (top + bottom) // 2
+        target_row = mid
         left = 0
         right = len(matrix[target_row])-1
         while left <= right:
