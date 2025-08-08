@@ -5,14 +5,14 @@ class Solution:
 
         while low <= high:
             mid = (low + high) // 2
-            cap,dy = 0,1
+            capacity,days_needed = 0,1
             for w in weights:
-                cap+=w
-                if cap > mid:
-                    dy += 1
-                    cap = w
-            if dy <= days:
+                capacity+=w
+                if capacity > mid:
+                    days_needed += 1
+                    capacity = w
+            if days_needed <= days:
                 high = mid - 1
             else:
-                low = mid+1
+                low = mid + 1
         return low
